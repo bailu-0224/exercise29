@@ -16,6 +16,6 @@ public class DaoTests {
 
     @Test
     void test(){
-        cr.insert(new Customer("qwe","asd",1));
+        cr.insert(new Customer("qwe","asd","司法","zzz", 1));
     }
 }

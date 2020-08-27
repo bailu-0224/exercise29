@@ -8,8 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Customer {
-    private String username;
-    private String password;
-    private int category;
-
+    private String account; //账户
+    private String password; //密码
+    private String type; //类型（消防/司法/技术）
+    private String name; //名字
+    private int auth; //权限（1正常/0封禁）
 }
