@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Case {
+public class FireCase {
     private int id; //案件编号
-    private Long time; //案件添加时间
-    private String name; //案件名称
+    private long time; //案件添加时间
+    private String name; //案件名称(火场名称)
 }

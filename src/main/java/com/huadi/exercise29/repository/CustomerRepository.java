@@ -1,4 +1,4 @@
-package com.huadi.exercise29.reopsitory;
+package com.huadi.exercise29.repository;
 
 import com.huadi.exercise29.entity.Customer;
 import org.apache.ibatis.annotations.Mapper;
