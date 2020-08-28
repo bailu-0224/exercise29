@@ -1,4 +1,4 @@
-package com.huadi.exercise29.domain;
+package com.huadi.exercise29.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
