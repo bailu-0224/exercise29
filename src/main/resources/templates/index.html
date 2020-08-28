@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>火灾物证鉴定管理系统</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body{
+            padding-top: 50px;
+            margin-bottom: 40px;
+            color: #5a5a5a;
+        }
+        .sidebar{
+            position: fixed;
+            top:51px;
+            bottom:0;
+            left: 0;
+            z-index: 1000;
+            display: block;
+            padding: 20px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-color: #ddd;
+            border-right: 1px solid #eee;
+        }
+        .nav-sidebar{
+            margin-right: -21px;
+            margin-left: -20px;
+            margin-bottom: 20px;
+        }
+        .nav-sidebar li a{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .nav-sidebar .active a, .nav-sidebar .active a:hover, .nav-sidebar .active a:focus{
+            color: #fff;
+            background-color: #428bca;
+        }
+        .main{
+            padding: 20px;
+        }
+        .main .page-header{
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <!--<div class="container">-->
+    <!-- 浏览器分辨率小到一定范围时，会出现导航栏折叠显示按钮-->
+    <div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse-div">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">火灾物证鉴定管理系统</a>
+    </div>
+    <!--导航栏内容-->
+    <div class="collapse navbar-collapse" id="nav-collapse-div">
+        <!-- 下拉列表-->
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">机构简介</a></li>
+            <li><a href="#">鉴定流程简介</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">鉴定申请<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">申请部门</li>
+                    <li><a href="#">消防</a></li>
+                    <li><a href="#">司法</a></li>
+                    <li><a href="#">技术服务</a></li>
+                    <li class="divider"></li>
+                </ul>
+            </li>
+            <li><a href="#">账户管理</a></li>
+        </ul>
+        <!--用户名、密码、登录form表单-->
+        <!--<form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="用户名..">
+                <input type="password" class="form-control" placeholder="密码...">
+                <button type="submit" class="btn btn-default">登录</button>
+            </div>
+        </form>
+    </div>
+   </div>-->
+
+<!--页面左右布局-->
+<!--左布局-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar" >
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">首页</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="#">消防</a></li>
+                <li><a href="#">司法</a></li>
+                <li><a href="#">技术服务</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="#">鉴定状态查询</a></li>
+                <li><a href="#">鉴定缴费查询</a></li>
+                <li><a href="#">历史鉴定查询</a></li>
+                <li><a href="#">仪器设备</a></li>
+            </ul>
+
+        </div>
+        <!--右布局-->
+        <div class="col-sm-9  col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            <h1 class="page-header">管理控制台</h1>
+            <!--<hr class="divider">-->
+            <!-- <p>
+                <button class="btn btn-lg btn-default">操作1</button>
+                <button class="btn btn-lg btn-primary">操作2</button>
+                <button class="btn btn-lg btn-success">操作3</button>
+                <button class="btn btn-lg btn-info">操作4</button>
+                <button class="btn btn-lg btn-warning">操作5</button>
+                <button class="btn btn-lg btn-danger">操作6</button>
+            </p> -->
+            <div class="row">
+                <!--第一个面板-最新提醒-->
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">最新提醒</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="alert alert-success " role="alert">
+                                <strong>提示</strong>您的鉴定申请 申请1（2020001）已经收到物证！
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                <strong>提示</strong>您的鉴定申请 申请1（2020001）已经受理委托！
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <strong>提示</strong>您的鉴定申请 申请1（2020001）已经审批通过！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--第二个面板-我的鉴定-->
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">我的鉴定</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked" role="tablist">
+                                <li role="presentation">
+                                    <a href="#" class="alert alert-info"><span class="badge pull-right">1</span>所有申请</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#" class="alert alert-info"><span class="badge pull-right">1</span>未缴费</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  第三个面板-设备管理-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">最近设备</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>名称</th>
+                                    <th>设备编号</th>
+                                    <th>领用人</th>
+                                    <th>领用日期</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>设备A</td>
+                                    <td>000001</td>
+                                    <td>甲</td>
+                                    <td>2020-08-15</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>设备B</td>
+                                    <td>000002</td>
+                                    <td>乙</td>
+                                    <td>2020-08-10</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>设备C</td>
+                                    <td>000003</td>
+                                    <td>甲</td>
+                                    <td>2020-08-05</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-primary">查看详细>></button>
+                        </div>
+                    </div>
+                </div>
+                <!--第四个面板&#45;&#45;鉴定进度  -->
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">鉴定进度</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h3><span class="label label-primary">鉴定1</span></h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 30%"><span class="sr-only">80%</span></div>
+                            </div>
+                            <h3><span class="label label-danger" >鉴定0</span></h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 100%"><span class="sr-only">30%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
