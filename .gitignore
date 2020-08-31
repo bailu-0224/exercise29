@@ -30,3 +30,6 @@ build/
 
 ### VS Code ###
 .vscode/
+/.vs/exercise29/config/applicationhost.config
+/.vs/exercise29/v16/.suo
+/.vs/VSWorkspaceState.json
