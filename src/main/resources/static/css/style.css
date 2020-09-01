@@ -1951,8 +1951,9 @@ p span.overline{
 	outline: none;
 }
 .contact-left input[type="text"],.contact-left input[type="email"]{
-	width:32.79%;
+	width:31.79%;
 	float: left;
+    margin:0 5px;
 }
 .contact-left input[type="email"]{
 	margin:0 5px;

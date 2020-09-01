@@ -5,8 +5,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <html>
+
 <head>
     <title>鉴定申请</title>
     <!-- for-mobile-apps -->
@@ -99,7 +99,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!-- start header menu -->
                 <ul class="megamenu skyblue">
                     <li class="active grid"><a class="color1" href="index.html">首页</a></li>
-                    <li class="grid"><a class="color1" href="introduction.html">机构简介</a>
+                    <li class="grid"><a class="color1" href="introduction.html" ">机构简介</a>
 			   <!-- <div class="megapanel ">
 				   <div class="row ">
 					   <div class="col1 ">
@@ -451,16 +451,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="col-md-8 contact-left">
                 <h3>鉴定申请表</h3>
-                <form id="serviceForm" enctype="multipart/form-data"  th:action="@{/form}" method="post">
-                    <!--                        msg显示提示消息-->
-                    <p style="color:#ff0000" th:text="${msg}" ></p>
-<!--                    请选择鉴定类型:</br>-->
-<!--                    </br>-->
-<!--                    <input id="Elec" name="serviceType" type="radio" value="">电器-->
-<!--                    <input id="Chem" name="serviceType" type="radio" value="">化工</br>-->
-<!--                    </br>-->
+                <form id="serviceForm" enctype="multipart/form-data">
+                    请选择鉴定类型:</br>
+                    </br>
+                    <input id="Elec" name="serviceType" type="radio" value="">电器
+                    <input id="Chem" name="serviceType" type="radio" value="">化工</br>
+                    </br>
                     <input id="Name" name="name" type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '姓名';}" required="">
-                    <input id="案件id" name="id" type="text" value="案件id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '案件id';}" required="">
+                    <input id="Email" name="email" type="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}" required="">
                     <input id="Number" name="number" type="text" value="联系电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '联系电话';}" required="">
                     <textarea id="Description" name="description" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请描述';}" required="">请描述</textarea>
                     <p>上传文件</p><input id="File" name="file" type="file" value="upload"></br>
@@ -508,7 +506,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p>© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
     </div>
     <!-- <div class="footer-copy ">
- //footer -->
+<!-- //footer -->
     <!-- for bootstrap working -->
     <script src="../../static/js/bootstrap.js ">
     </script>
