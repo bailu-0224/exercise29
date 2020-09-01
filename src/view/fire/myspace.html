@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>鉴定申请</title>
+    <title>我的鉴定</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,12 +49,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="../js/simpleCart.min.js">
     </script>
     <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+    <!-- the jScrollPane script -->
+    <script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" id="sourcecode">
+        $(function() {
+            $('.scroll-pane').jScrollPane();
+        });
+    </script>
+    <!-- //the jScrollPane script -->
 </head>
 
 <body>
-    <!-- header -->
-
-    <!-- //header -->
     <!-- top-header -->
     <div class="top_bg">
         <div class="container">
@@ -67,8 +72,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="top_left">
                     <ul>
-                        <li class="top_link"><a href="#">鉴定申请</a></li>|
-                        <li class="top_link"><a href="#">个人中心</a></li>
+                        <li class="top_link">
+                            <a href="form.html"></a>鉴定申请</a>
+                        </li>|
+                        <li class="top_link"><a href="myspace.html">修改个人资料</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
@@ -422,7 +429,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </ul>
     <div class="search">
         <form>
-            <input type="text" value="" placeholder="查询内容">
+            <input type="text" value="" placeholder="查询历史鉴定">
             <input type="submit" value="">
         </form>
     </div>
@@ -431,80 +438,148 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     </div>
     <!---->
-    <!-- contact -->
-    <div class="contact">
+    <!-- products -->
+    <div class="products">
         <div class="container">
-            <div class="col-md-4 contact-left">
-                <h3>地址</h3>
-                <p><span>xxxxxxxxxxxxxxxx</span></p>
-                <ul>
-                    <li>联系电话：1234567</li>
-                    <li>传真 :1234567</li>
-                    <li><a href="mailto:info@example.com">xxxxxxxx@xxx.com</a></li>
-                </ul>
+            <div class="products-grids">
+                <div class="col-md-8 products-grid-left">
+                    <div class="products-grid-lft">
+                        <div class="products-grd">
+                            <div class="p-one simpleCart_shelfItem prd">
+                                <a href="single.html">
+                                    <img src="images/11.jpg" alt="申请表预览图" class="img-responsive" />
+                                    <div class="mask">
+                                        <span>Quick View</span>
+                                    </div>
+                                </a>
+                                <h4>-鉴定名称</h4>
+                                <p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">申请日期</span></a></p>
+                                <div class="pro-grd">
+                                    <a href="single.html">鉴定状态</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-grd">
+                            <div class="p-one simpleCart_shelfItem prd">
+                                <a href="single.html">
+                                    <img src="images/10.jpg" alt="申请表预览图" class="img-responsive" />
+                                    <div class="mask">
+                                        <span>Quick View</span>
+                                    </div>
+                                </a>
+                                <h4>-鉴定名称</h4>
+                                <p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">申请日期</span></a></p>
+                                <div class="pro-grd">
+                                    <a href="single.html">鉴定状态</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-grd">
+                            <div class="p-one simpleCart_shelfItem prd">
+                                <a href="single.html">
+                                    <img src="images/9.jpg" alt="申请表预览图" class="img-responsive" />
+                                    <div class="mask">
+                                        <span>Quick View</span>
+                                    </div>
+                                </a>
+                                <h4>-鉴定名称</h4>
+                                <p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">申请日期</span></a></p>
+                                <div class="pro-grd">
+                                    <a href="single.html">鉴定状态</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="products-grid-lft">
+                        <div class="products-grd">
+                            <div class="p-one simpleCart_shelfItem prd">
+                                <a href="single.html">
+                                    <img src="images/1.jpg" alt="申请表预览图" class="img-responsive" />
+                                    <div class="mask">
+                                        <span>Quick View</span>
+                                    </div>
+                                </a>
+                                <h4>-鉴定名称</h4>
+                                <p><a class="item_add" href="#"><i></i> <span class=" item_price valsa">申请日期</span></a></p>
+                                <div class="pro-grd">
+                                    <a href="single.html">鉴定阶段</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 products-grid-right">
+                    <div class="w_sidebar">
+                        <section class="sky-form">
+                            <h4>鉴定状态</h4>
+                            <div class="row1 scroll-pane">
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>收到物证</label>
+                                </div>
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>检查分析</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>收到报告</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>邮寄报告</label>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="sky-form">
+                            <h4>付款状态</h4>
+                            <div class="row1 scroll-pane">
+                                <div class="col col-4">
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>已付款</label>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>待付款</label>
+                                </div>
+                        </section>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
-            <div class="col-md-8 contact-left">
-                <h3>鉴定申请表</h3>
-                <form id="serviceForm" enctype="multipart/form-data">
-                    请选择鉴定类型:</br>
-                    </br>
-                    <input id="Elec" name="serviceType" type="radio" value="">电器
-                    <input id="Chem" name="serviceType" type="radio" value="">化工</br>
-                    </br>
-                    <input id="Name" name="name" type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '姓名';}" required="">
-                    <input id="Email" name="email" type="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}" required="">
-                    <input id="Number" name="number" type="text" value="联系电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '联系电话';}" required="">
-                    <textarea id="Description" name="description" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请描述';}" required="">请描述</textarea>
-                    <p>上传文件</p><input id="File" name="file" type="file" value="upload"></br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            <div class="clearfix"> </div>
         </div>
-    </div>
-    <!-- //contact -->
-    <!-- footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="col-md-3 footer-grid">
-                <h6>关于我们</h6>
-                <p>系统按照业务流程，通过数据流打通各个管理部门之间的壁垒，为中心人员、消防人员、司法人员和其他技术服务人员提供统一的网上服务平台，最终达到中心内部信息交流，案件在线委托受理的目的。</p>
+        <!-- //products -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-3 footer-grid">
+                    <h6>关于我们</h6>
+                    <p>系统按照业务流程，通过数据流打通各个管理部门之间的壁垒，为中心人员、消防人员、司法人员和其他技术服务人员提供统一的网上服务平台，最终达到中心内部信息交流，案件在线委托受理的目的。</p>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h6>信息</h6>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">条款&条件</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h6>我的帐户</h6>
+                    <ul>
+                        <li><a href="login.html">我的帐号</a></li>
+                        <li><a href="#">鉴定历史</a></li>
+                        <li><a href="#">待办事项</a></li>
+                        <li><a href="#">最新消息</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h6>其它</h6>
+                    <ul>
+                        <li><a href="#">附属机构</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="col-md-3 footer-grid">
-                <h6>信息</h6>
-                <ul>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="#">隐私政策</a></li>
-                    <li><a href="#">条款&条件</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <h6>我的帐户</h6>
-                <ul>
-                    <li><a href="login.html">我的帐号</a></li>
-                    <li><a href="#">鉴定历史</a></li>
-                    <li><a href="#">待办事项</a></li>
-                    <li><a href="#">最新消息</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <h6>其它</h6>
-                <ul>
-                    <li><a href="#">附属机构</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
         </div>
-    </div>
-    <div class="footer-copy">
-        <p>© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
-    </div>
-    <!-- <div class="footer-copy ">
+        <div class="footer-copy">
+            <p>© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
+        </div>
+        <!-- <div class="footer-copy ">
 <!-- //footer -->
-    <!-- for bootstrap working -->
-    <script src="../js/bootstrap.js ">
-    </script>
-    <!-- //for bootstrap working -->
 </body>
 
 </html>

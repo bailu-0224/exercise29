@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>鉴定申请</title>
+    <title>鉴定流程</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,9 +49,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="../js/simpleCart.min.js">
     </script>
     <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom Styles */
+        
+        ul.nav-tabs {
+            width: 140px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+        
+        ul.nav-tabs li {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+        
+        ul.nav-tabs li:first-child {
+            border-top: none;
+        }
+        
+        ul.nav-tabs li a {
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+        
+        ul.nav-tabs li.active a,
+        ul.nav-tabs li.active a:hover {
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+        
+        ul.nav-tabs li:first-child a {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        ul.nav-tabs li:last-child a {
+            border-radius: 0 0 4px 4px;
+        }
+        
+        ul.nav-tabs.affix {
+            top: 30px;
+            /* Set the top position of pinned element */
+        }
+    </style>
+
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#myScrollspy">
     <!-- header -->
 
     <!-- //header -->
@@ -431,38 +481,91 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     </div>
     <!---->
-    <!-- contact -->
-    <div class="contact">
-        <div class="container">
-            <div class="col-md-4 contact-left">
-                <h3>地址</h3>
-                <p><span>xxxxxxxxxxxxxxxx</span></p>
-                <ul>
-                    <li>联系电话：1234567</li>
-                    <li>传真 :1234567</li>
-                    <li><a href="mailto:info@example.com">xxxxxxxx@xxx.com</a></li>
+    <!-- reg-form -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3" id="myScrollspy">
+                <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                    <li class="active"><a href="#section-1">鉴定申请</a></li>
+                    <li><a href="#section-2">鉴定状态查询</a></li>
+                    <li><a href="#section-3">鉴定缴费查询</a></li>
+                    <li><a href="#section-4">历史鉴定查询</a></li>
+                    <li><a href="#section-5">鉴定管理</a></li>
                 </ul>
             </div>
-            <div class="col-md-8 contact-left">
-                <h3>鉴定申请表</h3>
-                <form id="serviceForm" enctype="multipart/form-data">
-                    请选择鉴定类型:</br>
-                    </br>
-                    <input id="Elec" name="serviceType" type="radio" value="">电器
-                    <input id="Chem" name="serviceType" type="radio" value="">化工</br>
-                    </br>
-                    <input id="Name" name="name" type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '姓名';}" required="">
-                    <input id="Email" name="email" type="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}" required="">
-                    <input id="Number" name="number" type="text" value="联系电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '联系电话';}" required="">
-                    <textarea id="Description" name="description" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请描述';}" required="">请描述</textarea>
-                    <p>上传文件</p><input id="File" name="file" type="file" value="upload"></br>
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="col-xs-9">
+                <h2 id="section-1">鉴定申请</h2>
+                <blockquote>
+                    <p>
+                        用户首先申请电气/化工鉴定。当用户同意相关法规后，填写申请单并上传资料。
+                    </p>
+                </blockquote>
+                <hr>
+                <h2 id="section-2">鉴定状态查询</h2>
+                <blockquote>
+                    <p>
+                        用户可以查询鉴定状态。
+                    </p>
+                </blockquote>
+                <blockquote>
+                    <p>
+                        对于消防人员，鉴定状态为：①收到物证；②检查分析；③撰写报告；④邮寄报告（给出邮政编码）
+                    </p>
+                </blockquote>
+                <blockquote>
+                    <p>
+                        对于司法人员，鉴定状态为：①受理委托；②签订电子协议；③收到物证；④现场勘验；⑤检查分析； ⑥撰写报告；⑦邮寄报告（给出邮政编码）
+                    </p>
+                </blockquote>
+                <blockquote>
+                    <p>
+                        对于技术服务人员，鉴定状态为：①受理委托；②签订电子协议；③收到物证；④检查分析；⑤撰写报告；⑥邮寄报告（给出邮政编码）
+                    </p>
+                </blockquote>
+                <hr>
+                <h2 id="section-3">鉴定缴费查询</h2>
+                <blockquote>
+                    <p>
+                        用户可以查询申请鉴定报告所需缴费金额，在线缴费，系统支持向用户发送短信提醒。
+                    </p>
+                </blockquote>
+                <hr>
+                <h2 id="section-4">历史鉴定查询</h2>
+                <blockquote>
+                    <p>
+                        系统支持模糊查询和精准查询当前用户历史鉴定报告。
+                    </p>
+                </blockquote>
+                <hr>
+                <h2 id="section-5">鉴定管理</h2>
+                <blockquote>
+                    <p>
+                        <strong>鉴定流程管理</strong>
+                    </p>
+                    <p>中心收到用户鉴定申请后，审核是否满足鉴定要求；受理案件按照鉴定流程执行，不受理的发送回执。</p>
+                </blockquote>
+                <blockquote>
+                    <p>
+                        <strong>鉴定任务指派</strong>
+                    </p>
+                    <p>部门负责人或相关权限人员可以指派鉴定任务。</p>
+                </blockquote>
+                <blockquote>
+                    <p>
+                        <strong>生成鉴定报告</strong>
+                    </p>
+                    <p>系统支持生成PDF鉴定报告。</p>
+                </blockquote>
+                <blockquote>
+                    <p>
+                        <strong>更新鉴定进度状态</strong>
+                    </p>
+                    <p>相关权限人员可以更新鉴定进度状态。</p>
+                </blockquote>
             </div>
-            <div class="clearfix"> </div>
         </div>
     </div>
-    <!-- //contact -->
     <!-- footer -->
     <div class="footer">
         <div class="container">
@@ -473,7 +576,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-3 footer-grid">
                 <h6>信息</h6>
                 <ul>
-                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="#">关于我们</a></li>
                     <li><a href="#">隐私政策</a></li>
                     <li><a href="#">条款&条件</a></li>
                 </ul>
@@ -501,10 +604,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <!-- <div class="footer-copy ">
 <!-- //footer -->
-    <!-- for bootstrap working -->
-    <script src="../js/bootstrap.js ">
-    </script>
-    <!-- //for bootstrap working -->
 </body>
 
 </html>
