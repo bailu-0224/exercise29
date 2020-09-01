@@ -13,11 +13,13 @@ public class ViewController {
     @RequestMapping({"/fire/register.html"})
     public String register()
     {
+
         return "fire/register";
     }
     @RequestMapping("/fire/index.html")
     public String index()
     {
+
         return "fire/index";
     }
 

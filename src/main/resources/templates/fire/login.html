@@ -132,7 +132,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <form id="LoginForm" action="index.html" th:action="@{/user/login}" method="post">
                         <!--                        当msg不为空时候显示错误消息-->
                         <p style="color:red" th:if="${not #strings.isEmpty(msg)}" th:text="${msg}" ></p>
-                        <h5>用户名:</h5>
+                        <h5>用户名(注册手机号):</h5>
                         <input id="Account" name="username" type="text" >
                         <h5>密码:</h5>
                         <input id="Password" name="password" type="password" ></br>
