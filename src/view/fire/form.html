@@ -67,8 +67,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="top_left">
                     <ul>
-                        <li class="top_link"><a href="#">鉴定申请</a></li>|
-                        <li class="top_link"><a href="#">个人中心</a></li>
+                        <li class="top_link"><a href="form.html">鉴定申请</a></li>|
+                        <li class="top_link"><a href="myspace.html">个人中心</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
@@ -446,14 +446,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-8 contact-left">
                 <h3>鉴定申请表</h3>
                 <form id="serviceForm" enctype="multipart/form-data">
-                    请选择鉴定类型:</br>
-                    </br>
-                    <input id="Elec" name="serviceType" type="radio" value="">电器
-                    <input id="Chem" name="serviceType" type="radio" value="">化工</br>
-                    </br>
                     <input id="Name" name="name" type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '姓名';}" required="">
-                    <input id="Email" name="email" type="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}" required="">
+                    <input id="案件id" name="id" type="text" value="案件id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '案件id';}" required="">
                     <input id="Number" name="number" type="text" value="联系电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '联系电话';}" required="">
+
                     <textarea id="Description" name="description" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请描述';}" required="">请描述</textarea>
                     <p>上传文件</p><input id="File" name="file" type="file" value="upload"></br>
                     <input type="submit" value="Submit">
@@ -474,23 +470,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h6>信息</h6>
                 <ul>
                     <li><a href="about.html">关于我们</a></li>
-                    <li><a href="#">隐私政策</a></li>
-                    <li><a href="#">条款&条件</a></li>
+                    <li><a href="laws.html">条款&条件</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
                 <h6>我的帐户</h6>
                 <ul>
                     <li><a href="login.html">我的帐号</a></li>
-                    <li><a href="#">鉴定历史</a></li>
-                    <li><a href="#">待办事项</a></li>
-                    <li><a href="#">最新消息</a></li>
+                    <li><a href="myspace.html">鉴定历史</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
                 <h6>其它</h6>
                 <ul>
-                    <li><a href="#">附属机构</a></li>
+                    <li><a href="friendly.html">友情链接</a></li>
                 </ul>
             </div>
             <div class="clearfix"></div>
