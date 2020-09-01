@@ -5,22 +5,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {
-    @RequestMapping({"/","/fire/login"})
+    @RequestMapping({"/","/fire/login","/login.html"})
     public String login()
     {
         return "fire/login";
     }
-    @RequestMapping({"/fire/register.html"})
+    @RequestMapping({"/register.html"})
     public String register()
     {
 
         return "fire/register";
     }
-    @RequestMapping("/fire/index.html")
+    @RequestMapping("/form.html")
+    public String form()
+    {
+
+        return "fire/form";
+    }
+    @RequestMapping("/index.html")
     public String index()
     {
 
         return "fire/index";
     }
+    @RequestMapping("/introduction.html")
+    public String introduction()
+    {
 
+        return "fire/introduction";
+    }
+    @RequestMapping("/about.html")
+    public String about()
+    {
+
+        return "fire/about";
+    }
+    @RequestMapping("/myspace.html")
+    public String myspace()
+    {
+
+        return "fire/myspace";
+    }
 }

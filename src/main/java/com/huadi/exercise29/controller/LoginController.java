@@ -1,5 +1,7 @@
 package com.huadi.exercise29.controller;
 
+import com.huadi.exercise29.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,13 +11,18 @@ import java.util.Map;
 
 @Controller
 public class LoginController {
+
+    @Autowired
+    private CustomerRepository customerRepository;
+
     @PostMapping(value="/user/login")
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Map<String,Object> map)
     {
+        String password12 = customerRepository.checkPasswd(username);
 
-        if(!StringUtils.isEmpty(username) && "123456".equals(password))
+        if(!StringUtils.isEmpty(username) && password12.equals(password))
             return "fire/index";
         else {
             map.put("msg", "用户名密码错误");

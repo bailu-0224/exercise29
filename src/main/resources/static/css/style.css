@@ -376,7 +376,7 @@ a.simpleCart_empty {
 	right: -3%;
 }
 .callbacks2_nav.prev{
-	position: absolute;
+    position: absolute;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   top:80%;
   left:47.6%;
