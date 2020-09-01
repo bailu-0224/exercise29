@@ -15,16 +15,16 @@ public class DaoTests {
     private CustomerRepository cr;
 
     @Autowired
-    private AuthenticationRepository ccr;
+    private AuthenticationRepository aur;
 
     @Test
-    void insertTest(){
-        ccr.insert(new Authentication(0,"司法",1,"dasd",1,200,"asd","dasd","123456"));
+    void AuthenticationTest(){
+        aur.insert(new Authentication(0,"司法","水瓶","瓶盖已丢失。",1,"dasd",1,200,"asd","dasd","123456"));
     }
 
 
     @Test
-    void test1() {
+    void CustomerTest() {
         cr.insert(new Customer("dad","ada","司法","das",1));
     }
 

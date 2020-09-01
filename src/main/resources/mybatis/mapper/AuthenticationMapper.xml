@@ -3,8 +3,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.huadi.exercise29.repository.AuthenticationRepository">
     <insert id="insert" parameterType="com.huadi.exercise29.entity.Authentication">
-        INSERT INTO authentication (id,type,status,customer_id,case_id,cost,item,report,express_num)
-            VALUES (#{id},#{type},#{status},#{customerId},#{caseId},#{cost},#{item},#{report},#{expressNum})
+        INSERT INTO authentication (id,type,name,description,status,customer_id,case_id,cost,item,report,express_num)
+            VALUES (#{id},#{type},#{name},#{description},#{status},#{customerId},#{caseId},#{cost},#{item},#{report},#{expressNum})
     </insert>
 
 </mapper>

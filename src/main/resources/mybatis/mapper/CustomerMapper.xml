@@ -6,7 +6,7 @@
         SELECT * FROM customer WHERE account = #{account}
     </select>
     <insert id="insert" parameterType="com.huadi.exercise29.entity.Customer">
-        INSERT INTO customer (account, password, type, name, auth)
+        INSERT INTO customer (account,password,type,name,auth)
             VALUES (#{account},#{password},#{type},#{name},#{auth})
     </insert>
     <delete id="delete" parameterType="java.lang.String">
