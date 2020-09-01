@@ -1,7 +1,9 @@
 package com.huadi.exercise29;
 
+import com.huadi.exercise29.entity.Authentication;
 import com.huadi.exercise29.entity.Customer;
-import com.huadi.exercise29.reopsitory.CustomerRepository;
+import com.huadi.exercise29.repository.AuthenticationRepository;
+import com.huadi.exercise29.repository.CustomerRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,16 +14,18 @@ public class DaoTests {
     @Autowired
     private CustomerRepository cr;
 
+    @Autowired
+    private AuthenticationRepository aur;
+
     @Test
-    void insertTest(){
-        cr.insert(new Customer("qwe","asd","司法","zzz", 1));
+    void AuthenticationTest(){
+        aur.insert(new Authentication(0,"司法","水瓶","瓶盖已丢失。",1,"dasd",1,200,"asd","dasd","123456"));
     }
 
 
     @Test
-    void test1() {
-        if (cr.selectByAccount("zxc")==null)
-            System.out.println("aaaaaa");
+    void CustomerTest() {
+        cr.insert(new Customer("dad","ada","司法","das",1));
     }
 
 

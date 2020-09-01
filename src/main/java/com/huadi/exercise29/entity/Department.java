@@ -12,5 +12,5 @@ public class Department {
     private String name; //部门名称
     private String leader; //负责人姓名
     private String phone; //负责人电话
-    private Long time; //部门建立时间
+    private long time; //部门建立时间
 }

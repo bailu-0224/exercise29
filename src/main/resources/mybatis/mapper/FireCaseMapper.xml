@@ -1,0 +1,10 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huadi.exercise29.repository.FireCaseRepository">
+    <insert id="insert" parameterType="com.huadi.exercise29.entity.FireCase">
+        INSERT INTO fire_case (id, time, name) VALUES (#{id},#{time},#{name})
+    </insert>
+
+
+</mapper>
