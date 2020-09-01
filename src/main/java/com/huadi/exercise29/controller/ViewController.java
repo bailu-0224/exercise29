@@ -46,4 +46,10 @@ public class ViewController {
 
         return "fire/myspace";
     }
+    @RequestMapping("/process.html")
+    public String process()
+    {
+
+        return "fire/process";
+    }
 }
