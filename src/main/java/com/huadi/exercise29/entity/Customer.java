@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Customer {
-    private String account; //账户
+    private String account; //账户(联系电话)
     private String password; //密码
     private String type; //类型（消防/司法/技术）
     private String name; //名字
