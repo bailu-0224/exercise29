@@ -19,7 +19,7 @@ public class FormController {
 
     @PostMapping(value = "/form")
     public String submit(@RequestParam("username") String username,
-                         @RequestParam("id") String caseid,
+                         @RequestParam("id") int caseid,
                          @RequestParam("number") String phone_number,
                          @RequestParam("description") String description,
                          Map<String,Object> map)    //前端没给名字
