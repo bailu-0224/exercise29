@@ -2,9 +2,47 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.huadi.exercise29.repository.AuthenticationRepository">
+    <resultMap id="AuthenticationMap" type="com.huadi.exercise29.entity.Authentication">
+        <id column="id"/><!--如果不指定id，当其他所有列有相同的值时重复记录不会加入到结果集中-->
+        <result column="id" property="id"/>
+        <result column="type" property="type"/>
+        <result column="name" property="name"/>
+        <result column="description" property="description"/>
+        <result column="status" property="status"/>
+        <result column="customer_id" property="customerId"/>
+        <result column="case_id" property="caseId"/>
+        <result column="cost" property="cost"/>
+        <result column="item" property="item"/>
+        <result column="report" property="report"/>
+        <result column="express_num" property="expressNum"/>
+    </resultMap>
+
     <insert id="insert" parameterType="com.huadi.exercise29.entity.Authentication">
         INSERT INTO authentication (id,type,name,description,status,customer_id,case_id,cost,item,report,express_num)
             VALUES (#{id},#{type},#{name},#{description},#{status},#{customerId},#{caseId},#{cost},#{item},#{report},#{expressNum})
     </insert>
-
+    <select id="selectById" parameterType="int" resultMap="AuthenticationMap">
+        SELECT * FROM authentication WHERE id = #{id}
+    </select>
+    <select id="selectAll" resultMap="AuthenticationMap">
+        SELECT * FROM authentication
+    </select>
+    <select id="selectByCustomer" parameterType="java.lang.String" resultMap="AuthenticationMap">
+        SELECT * FROM authentication WHERE customer_id = #{customerId}
+    </select>
+    <update id="setStatus">
+        UPDATE authentication SET status = #{status} WHERE id = #{id}
+    </update>
+    <update id="setCost">
+        UPDATE authentication SET cost = #{cost} WHERE id = #{id}
+    </update>
+    <update id="setItem">
+        UPDATE authentication SET item = #{item} WHERE id = #{id}
+    </update>
+    <update id="setReport">
+        UPDATE authentication SET report = #{report} WHERE id = #{id}
+    </update>
+    <update id="setExpress">
+        UPDATE authentication SET express_num = #{expressNum} WHERE id = #{id}
+    </update>
 </mapper>
