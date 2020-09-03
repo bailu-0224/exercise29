@@ -10,7 +10,7 @@ public class ViewController {
     {
         return "fire/login";
     }
-    @RequestMapping({"/register.html"})
+    @RequestMapping({"/register.html","/user/login/register.html"})
     public String register()
     {
 
