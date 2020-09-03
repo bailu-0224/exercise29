@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>登录</title>
+    <title>相关法规</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,9 +49,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="../js/simpleCart.min.js">
     </script>
     <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom Styles */
+        
+        ul.nav-tabs {
+            width: 140px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+        
+        ul.nav-tabs li {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+        
+        ul.nav-tabs li:first-child {
+            border-top: none;
+        }
+        
+        ul.nav-tabs li a {
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+        
+        ul.nav-tabs li.active a,
+        ul.nav-tabs li.active a:hover {
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+        
+        ul.nav-tabs li:first-child a {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        ul.nav-tabs li:last-child a {
+            border-radius: 0 0 4px 4px;
+        }
+        
+        ul.nav-tabs.affix {
+            top: 30px;
+            /* Set the top position of pinned element */
+        }
+    </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#myScrollspy">
     <!-- header -->
 
     <!-- //header -->
@@ -67,8 +116,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="top_left">
                     <ul>
-                        <li class="top_link"><a href="login.html">鉴定申请</a></li>|
-                        <li class="top_link"><a href="login.html">个人中心</a></li>
+                        <li class="top_link"><a href="form.html">鉴定申请</a></li>|
+                        <li class="top_link"><a href="myspace.html">个人中心</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
@@ -93,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!-- start header menu -->
                 <ul class="megamenu skyblue">
                     <li class="active grid"><a class="color1" href="index.html">首页</a></li>
-                    <li class="grid"><a class="color1" href="introduction.html">机构简介</a>
+                    <li class="grid"><a class="color1" href="introduction.html" ">机构简介</a>
 			   <!-- <div class="megapanel ">
 				   <div class="row ">
 					   <div class="col1 ">
@@ -431,50 +480,107 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     </div>
     <!---->
-    <!-- login-page -->
-    <div class="login">
-        <div class="container">
-            <div class="login-grids">
-                <div class="col-md-6 log">
-                    <h3>登录</h3>
-                    <div class="strip"></div>
-                    <p>欢迎来到火灾物证鉴定系统，请先填写登录信息。</p>
-                    <form id="LoginForm">
-                        <h5>用户名:</h5>
-                        <input id="Account" name="account" type="text" value="">
-                        <h5>密码:</h5>
-                        <input id="Password" name="password" type="password" value=""></br>
-                        <a href="forget.html">忘记密码 ?</a>
-                        </br>
-                        </br>
-                        <div class="form-check">
-                            <input type="radio" name="logType" id="Fire" value="fire" checked> 消防
-                            </br>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="logType" id="Judiciary" value="judiciary" checked> 司法
-                            </br>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="logType" id="Tech" value="tech" checked> 技术服务
-                            </br>
-                        </div>
-                        </br>
-                        <a href="index.html " class="button ">Login</a>
-                    </form>
-                    <br/>
-                </div>
-                <div class="col-md-6 login-right ">
-                    <h3>注册新账户</h3>
-                    <div class="strip "></div>
-                    <p>注册新账户以使用鉴定申请等功能。</p>
-                    <a href="register.html " class="button ">注册新账户</a>
-                </div>
-                <div class="clearfix "></div>
+    <!-- reg-form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3" id="myScrollspy">
+                <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                    <li class="active"><a href="#section-1">放火火灾鉴定</a></li>
+                    <li><a href="#section-2">电气火灾鉴定</a></li>
+                    <li><a href="#section-3">汽车火灾鉴定</a></li>
+                    <li><a href="#section-4">自然化工爆炸火灾鉴定</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-9">
+                <h2 id="section-1">放火火灾鉴定</h2>
+                <blockquote>
+                    <h4><strong>可提取的物证的种类主要有：</strong></h4>
+                    <p>
+                        ·地面类检材，包括水泥、瓷砖、地毯、实木地板、复合地板、人造革、泥土等
+                    </p>
+                    <p>·盛装容器类检材，包括金属桶、塑料桶、塑料袋、浸油物、其他盛装物等</p>
+                    <p>·低洼处救火时残存的水样</p>
+                    <p>·残留物检材，包括木块、炭灰、家具软垫、生活用品、衣物等残骸</p>
+                    <p>·烟尘类检材，包括门窗玻璃碎片、墙壁烟尘、金属制品烟尘及其他物体表面附着的烟尘</p>
+                    <p>·人体类检材，包括嫌疑人或尸体的毛发、指甲、表皮</p>
+                </blockquote>
+                <blockquote>
+                    <h4><strong>提取的方法：</strong></h4>
+                    <p>
+                        ·水泥地面：可用斧子或錾子直接砸取有流淌痕迹部位的水泥表层
+                    </p>
+                    <p>·木地板（复合地板）：可用锯子或直接提取木板条或残留块，还可同时提取地板下地面上的残留物</p>
+                    <p>·瓷砖地面：可直接提取瓷砖缝隙连接处的碎块</p>
+                    <p>·地毯：可用剪子剪取地毯残留的边缘或残片</p>
+                    <p>·泥土：可用铲子直接铲取</p>
+                    <p>·玻璃残片：最好提取掉落在地面上的门、窗玻璃碎片，或镜子等玻璃碎片，可直接提取</p>
+                    <p>·水杯、陶瓷制品等表面的烟尘可以用医用脱脂棉擦拭或直接提取</p>
+                    <p>·墙壁抹灰层可以直接刮取或擦取</p>
+                </blockquote>
+                <blockquote>
+                    <h4><strong>提取物证类别的最佳顺序</strong></h4>
+                    <p>
+                        <strong>当现场以下样品均可以提取时，最好按照如下顺序提取，或依次提取:</strong>
+                    </p>
+                    <p>·容器类物证（放火物）</p>
+                    <p>·地面类物证</p>
+                    <p>·水样</p>
+                    <p>·人体的衣物、头发、指甲</p>
+                    <p>·炭化残留物</p>
+                    <p>·烟尘</p>
+                </blockquote>
+                <blockquote>
+                    <h4><strong>易燃液体类物证的保存方法</strong></h4>
+                    <p>·金属罐</p>
+                    <p>·专用物证袋</p>
+                    <p>·磨口玻璃瓶</p>
+                    <p>·密封性好的塑料瓶</p>
+                </blockquote>
+                <blockquote>
+                    <h4><strong>物证提取的数量</strong></h4>
+                    <p>·可按照《GB/T 20162-2006 火灾技术鉴定物证提取方法》中规定的数量提取，但总原则是尽量多取！</p>
+                </blockquote>
+                <blockquote>
+                    <h4><strong>物证提取的原则</strong></h4>
+                    <p>·提取及时</p>
+                    <p>·位置准确</p>
+                    <p>·数量足够</p>
+                    <p>·类别多样</p>
+                    <p>·密封保存</p>
+                    <p>·送检及时</p>
+                    <p>·对比样品</p>
+                </blockquote>
+                <hr>
+                <h2 id="section-2">电气火灾鉴定</h2>
+                <blockquote>
+                    <p>
+                        实际工作中，可全面开展各类铜铝导线、电缆、插头插片、电气连接件及钢铁金属构件的短路、过电流、接触不良、漏电、雷击等金属熔化痕迹的定性分析鉴定；并可对电控柜、配电箱、电机等电气设备，电视机、空调、电冰箱（柜）、电动自行车等家用电器，以及电熨斗、饮水机、电饭锅、电暖气、热得快等电热器具进行电气（电热）故障分析和鉴定。
+                    </p>
+                </blockquote>
+                <hr>
+                <h2 id="section-3">汽车火灾鉴定</h2>
+                <blockquote>
+                    <p>我中心承担了公安部重点科研项目《汽车火灾现场勘查及物证鉴定技术的研究》，综合性地开展汽车火灾原因调查的研究工作，成功地解决了汽车电气火灾、放火火灾和油品泄漏火灾等现场勘查、物证提取与物证鉴定方面的技术难题。</p>
+                </blockquote>
+                <hr>
+                <h2 id="section-4">自燃化工爆炸火灾鉴定</h2>
+                <blockquote>
+                    <p>自燃火灾涉及到的物质，多是易氧化放热、吸水放热与分解放热等热不稳定性物质。不论在车间生产、仓库储存或运输过程中，当周围环境条件具备时，都会发生自燃着火。</p>
+                </blockquote>
+                <blockquote>
+                    <h4><strong>化工爆炸火灾主要也涉及到热不稳定性问题：</strong></h4>
+                    <p>
+                        生产条件控制方面，如反应速率过快、升温失控、违反操作规程、投错物料等，均有燃烧爆炸的可能性。
+                    </p>
+                    <p>运输过程中违反规定，受高温、撞击、摩擦、受酸性物质影响、受潮等，会发生燃烧爆炸事故。</p>
+                    <p>·提取燃烧、爆炸物质的同一批未经高温、火烧的成品或半成品</p>
+                    <p>·提取原材料</p>
+                    <p>·对于自燃火灾，提取起火点处炭化物</p>
+                    <p>·对于化工爆炸火灾，提取起火点处喷溅物，以供鉴定使用</p>
+                </blockquote>
             </div>
         </div>
     </div>
-    <!-- //login-page -->
     <!-- footer -->
     <div class="footer">
         <div class="container">
@@ -509,7 +615,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="footer-copy">
         <p>© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
     </div>
-    <!-- //footer -->
+    <!-- <div class="footer-copy ">
+<!-- //footer -->
 </body>
 
 </html>

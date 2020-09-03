@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>登录</title>
+    <title>公正声明</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,9 +49,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="../js/simpleCart.min.js">
     </script>
     <link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom Styles */
+        
+        ul.nav-tabs {
+            width: 140px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+        
+        ul.nav-tabs li {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+        
+        ul.nav-tabs li:first-child {
+            border-top: none;
+        }
+        
+        ul.nav-tabs li a {
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+        
+        ul.nav-tabs li.active a,
+        ul.nav-tabs li.active a:hover {
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+        
+        ul.nav-tabs li:first-child a {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        ul.nav-tabs li:last-child a {
+            border-radius: 0 0 4px 4px;
+        }
+        
+        ul.nav-tabs.affix {
+            top: 30px;
+            /* Set the top position of pinned element */
+        }
+    </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#myScrollspy">
     <!-- header -->
 
     <!-- //header -->
@@ -67,8 +116,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="top_left">
                     <ul>
-                        <li class="top_link"><a href="login.html">鉴定申请</a></li>|
-                        <li class="top_link"><a href="login.html">个人中心</a></li>
+                        <li class="top_link"><a href="form.html">鉴定申请</a></li>|
+                        <li class="top_link"><a href="myspace.html">个人中心</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
@@ -93,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!-- start header menu -->
                 <ul class="megamenu skyblue">
                     <li class="active grid"><a class="color1" href="index.html">首页</a></li>
-                    <li class="grid"><a class="color1" href="introduction.html">机构简介</a>
+                    <li class="grid"><a class="color1" href="introduction.html" ">机构简介</a>
 			   <!-- <div class="megapanel ">
 				   <div class="row ">
 					   <div class="col1 ">
@@ -431,85 +480,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     </div>
     <!---->
-    <!-- login-page -->
-    <div class="login">
-        <div class="container">
-            <div class="login-grids">
-                <div class="col-md-6 log">
-                    <h3>登录</h3>
-                    <div class="strip"></div>
-                    <p>欢迎来到火灾物证鉴定系统，请先填写登录信息。</p>
-                    <form id="LoginForm">
-                        <h5>用户名:</h5>
-                        <input id="Account" name="account" type="text" value="">
-                        <h5>密码:</h5>
-                        <input id="Password" name="password" type="password" value=""></br>
-                        <a href="forget.html">忘记密码 ?</a>
-                        </br>
-                        </br>
-                        <div class="form-check">
-                            <input type="radio" name="logType" id="Fire" value="fire" checked> 消防
-                            </br>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="logType" id="Judiciary" value="judiciary" checked> 司法
-                            </br>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" name="logType" id="Tech" value="tech" checked> 技术服务
-                            </br>
-                        </div>
-                        </br>
-                        <a href="index.html " class="button ">Login</a>
-                    </form>
-                    <br/>
-                </div>
-                <div class="col-md-6 login-right ">
-                    <h3>注册新账户</h3>
-                    <div class="strip "></div>
-                    <p>注册新账户以使用鉴定申请等功能。</p>
-                    <a href="register.html " class="button ">注册新账户</a>
-                </div>
-                <div class="clearfix "></div>
-            </div>
+    <div class="progress progress-striped active">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
         </div>
     </div>
-    <!-- //login-page -->
-    <!-- footer -->
-    <div class="footer">
+    <!-- reg-form -->
+    <div class="contact">
         <div class="container">
-            <div class="col-md-3 footer-grid">
-                <h6>关于我们</h6>
-                <p>系统按照业务流程，通过数据流打通各个管理部门之间的壁垒，为中心人员、消防人员、司法人员和其他技术服务人员提供统一的网上服务平台，最终达到中心内部信息交流，案件在线委托受理的目的。</p>
+
+            <div class="col-md-8 contact-left">
+                <blockquote>
+                    <h4><strong>1、本鉴定机构在鉴定/检验活动中处于第三方中立地位，不作为委托方及其关系方的授权代表，不作为诉讼所涉及各方的授权代表；</strong></h4>
+                </blockquote>
+                <hr>
+                <blockquote>
+                    <h4><strong>2、鉴定所确保所从事的鉴定活动不受来自行政的、经济的和其他方面的干预和影响，以合法的方式确保开展鉴定活动的资源得到足够补充；</strong></h4>
+                </blockquote>
+                <hr>
+                <blockquote>
+                    <h4><strong>3、鉴定人严格遵守执业纪律，保守鉴定活动中所涉及的所有秘密，鉴定所严格按照国家法律法规开展鉴定活动，鉴定活动接受国家、社会和委托方的监督。</strong></h4>
+                </blockquote>
+                <hr>
             </div>
-            <div class="col-md-3 footer-grid">
-                <h6>信息</h6>
-                <ul>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="announce.html">公正声明</a></li>
-                    <li><a href="laws.html">条款&条件</a></li>
+
+            <div class="col-md-4 contact-left">
+                <img src="../images/warning.png" alt="Pulpit rock" width="304" height="304">
                 </ul>
             </div>
-            <div class="col-md-3 footer-grid">
-                <h6>我的帐户</h6>
-                <ul>
-                    <li><a href="login.html">我的帐号</a></li>
-                    <li><a href="myspace.html">鉴定历史</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <h6>其它</h6>
-                <ul>
-                    <li><a href="friendly.html">友情链接</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
         </div>
-    </div>
-    <div class="footer-copy">
-        <p>© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
-    </div>
-    <!-- //footer -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-3 footer-grid">
+                    <h6>关于我们</h6>
+                    <p>系统按照业务流程，通过数据流打通各个管理部门之间的壁垒，为中心人员、消防人员、司法人员和其他技术服务人员提供统一的网上服务平台，最终达到中心内部信息交流，案件在线委托受理的目的。</p>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h6>信息</h6>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="announce.html">公正声明</a></li>
+                        <li><a href="laws.html">条款&条件</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h6>我的帐户</h6>
+                    <ul>
+                        <li><a href="login.html">我的帐号</a></li>
+                        <li><a href="myspace.html">鉴定历史</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid">
+                    <h6>其它</h6>
+                    <ul>
+                        <li><a href="friendly.html">友情链接</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
+        </div>
+        <!-- <div class="footer-copy ">
+<!-- //footer -->
 </body>
 
 </html>

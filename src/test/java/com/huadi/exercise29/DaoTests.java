@@ -19,7 +19,9 @@ public class DaoTests {
 
     @Test
     void AuthenticationTest(){
-        aur.insert(new Authentication(0,"司法","水瓶","瓶盖已丢失。",1,"dasd",1,200,"asd","dasd","123456"));
+        //aur.insert(new Authentication(0,"消防","头盔","哈哈哈。",1,"asfds",1,200,"asd","dasd","123456"));
+        //System.out.println(aur.selectAll());
+        System.out.println(aur.setExpress(2,"1201207570"));
     }
 
 
