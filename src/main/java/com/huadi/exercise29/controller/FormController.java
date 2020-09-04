@@ -1,8 +1,10 @@
 package com.huadi.exercise29.controller;
 
-import com.huadi.exercise29.Service.AuthService;
+
 import com.huadi.exercise29.entity.Authentication;
+import com.huadi.exercise29.entity.Customer;
 import com.huadi.exercise29.entity.FireCase;
+import com.huadi.exercise29.repository.AuthenticationRepository;
 import com.huadi.exercise29.repository.CustomerRepository;
 import com.huadi.exercise29.repository.FireCaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,20 +19,36 @@ import java.util.Map;
 @Controller
 public class FormController {
 
+    @Autowired
+    private AuthenticationRepository authenticationRepository;
+
     @PostMapping(value = "/form")
-    public String submit(@RequestParam("username") String username,
-                         @RequestParam("id") int caseid,
+    public String form(@RequestParam("name") String name,
+                         @RequestParam("id") String caseid,
                          @RequestParam("number") String phone_number,
                          @RequestParam("description") String description,
-                         Model model)
-    {
+                         //@RequestParam("file") String item_root,
+                         Model model) {
 
-        int num_Auth = AuthService.insert(new Authentication(0,"消防","头盔","哈哈哈。",1,"asfds",1,200,"asd","dasd","123456"));
-        if (num_Auth == 1)
+        int num_Auth = authenticationRepository.insert(new Authentication(0,
+                "消防",
+                name,
+                description,
+                1,
+                phone_number,
+                Integer.parseInt(caseid),
+                0,
+                "item_root",
+                "report_root",
+                "000000"));
+        //int num_Auth = authenticationRepository.insert(new Authentication(0,"消防","头盔","哈哈哈。",1,"asfds",1,200,"asd","dasd","123456"));
+
+        if (num_Auth == 1) {
             model.addAttribute("msg", "提交成功");
-        else
+            return "fire/index";
+        } else {
             model.addAttribute("msg", "提交失败，请重新提交");
-        return "fire/form";
+            return "/fire/form";
+        }
     }
-
 }
