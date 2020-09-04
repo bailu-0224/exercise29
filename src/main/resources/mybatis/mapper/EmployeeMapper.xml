@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huadi.exercise29.repository.EmployeeRepository">
+    <resultMap id="EmployeeMap" type="com.huadi.exercise29.entity.Employee">
+        <id column="id"/>
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="dept_id" property="deptId"/>
+        <result column="duty" property="duty"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.huadi.exercise29.entity.Employee">
+        INSERT INTO employee (id, name, dept_id, duty) VALUES (#{id},#{name},#{deptId},#{duty})
+    </insert>
+
+
+</mapper>

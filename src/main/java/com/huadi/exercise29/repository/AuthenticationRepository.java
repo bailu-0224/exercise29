@@ -28,10 +28,10 @@ public interface AuthenticationRepository {
     //将id为id的鉴定的费用更新为cost，成功返回1，否则返回0
     int setCost(@Param("id")int id, @Param("cost")int cost);
 
-    //将id为id的鉴定的物证路径更新为item，成功返回1，否则返回0
+    //将id为id的鉴定的物证文件目录更新为item，成功返回1，否则返回0
     int setItem(@Param("id")int id, @Param("item")String item);
 
-    //将id为id的鉴定的报告地址更新为report，成功返回1，否则返回0
+    //将id为id的鉴定的报告文件目录更新为report，成功返回1，否则返回0
     int setReport(@Param("id")int id, @Param("report")String report);
 
     //将id为id的鉴定的快递单号更新为expressNum，成功返回1，否则返回0
