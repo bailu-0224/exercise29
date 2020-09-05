@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huadi.exercise29.repository.DepartmentRepository">
+    <insert id="insert" parameterType="com.huadi.exercise29.entity.Department">
+        INSERT INTO department (id,name,comment,leader,phone,time)
+            VALUES (#{id},#{name},#{comment},#{leader},#{phone},#{time})
+    </insert>
+
+
+</mapper>

@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class Department {
     private int id; //部门编号
     private String name; //部门名称
+    private String comment; //备注
     private String leader; //负责人姓名
     private String phone; //负责人电话
     private long time; //部门建立时间
