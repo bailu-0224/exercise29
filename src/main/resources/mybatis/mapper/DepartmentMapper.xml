@@ -6,6 +6,12 @@
         INSERT INTO department (id,name,comment,leader,phone,time)
             VALUES (#{id},#{name},#{comment},#{leader},#{phone},#{time})
     </insert>
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM department WHERE id = #{id}
+    </delete>
+    <select id="selectAll" parameterType="int" resultType="com.huadi.exercise29.entity.Department">
+        SELECT * FROM department
+    </select>
 
 
 </mapper>

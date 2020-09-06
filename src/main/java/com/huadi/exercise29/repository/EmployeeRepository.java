@@ -9,4 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeRepository {
     //插入一个员工，成功返回1，失败返回0
     int insert(Employee employee);
+
+    //根据id删除一个员工，成功返回1，失败返回0
+    int deleteById(String id);
 }

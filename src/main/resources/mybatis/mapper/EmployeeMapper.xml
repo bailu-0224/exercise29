@@ -14,5 +14,8 @@
         INSERT INTO employee (id, name, dept_id, duty) VALUES (#{id},#{name},#{deptId},#{duty})
     </insert>
 
-
+    <delete id="deleteById" parameterType="java.lang.String">
+        DELETE FROM employee WHERE id = #{id}
+    </delete>
+    
 </mapper>

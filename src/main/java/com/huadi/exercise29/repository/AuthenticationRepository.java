@@ -10,8 +10,11 @@ import java.util.List;
 @Repository
 @Mapper
 public interface AuthenticationRepository {
-    // 添加一条鉴定申请
+    //添加一条鉴定申请，成功返回1，否则返回0
     int insert(Authentication au);
+
+    //通过鉴定id删除一条鉴定申请，成功返回1，否则返回0
+    int deleteById(int id);
 
     //通过鉴定id查找一条鉴定申请，如果id不存在，返回null
     Authentication selectById(int id);
