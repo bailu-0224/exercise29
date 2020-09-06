@@ -9,9 +9,12 @@
         INSERT INTO customer (account,password,type,name,auth)
             VALUES (#{account},#{password},#{type},#{name},#{auth})
     </insert>
-    <delete id="delete" parameterType="java.lang.String">
+    <delete id="deleteByAccount" parameterType="java.lang.String">
         DELETE FROM customer WHERE account = #{account}
     </delete>
+    <select id="selectAll" resultType="com.huadi.exercise29.entity.Customer">
+        SELECT * FROM customer
+    </select>
     <select id="checkPasswd" parameterType="java.lang.String" resultType="java.lang.String">
         SELECT password FROM customer WHERE account = #{account}
     </select >

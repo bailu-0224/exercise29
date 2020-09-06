@@ -21,6 +21,9 @@
         INSERT INTO authentication (id,type,name,description,status,customer_id,case_id,cost,item,report,express_num)
             VALUES (#{id},#{type},#{name},#{description},#{status},#{customerId},#{caseId},#{cost},#{item},#{report},#{expressNum})
     </insert>
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM authentication WHERE id = #{id}
+    </delete>
     <select id="selectById" parameterType="int" resultMap="AuthenticationMap">
         SELECT * FROM authentication WHERE id = #{id}
     </select>
