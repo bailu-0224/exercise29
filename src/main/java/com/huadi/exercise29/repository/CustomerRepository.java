@@ -4,6 +4,8 @@ import com.huadi.exercise29.entity.Customer;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @Mapper
 public interface CustomerRepository {
@@ -12,7 +14,10 @@ public interface CustomerRepository {
     int insert(Customer customer);
 
     //删除一个用户，成功返回1，用户不存在或删除失败返回0
-    int delete(String account);
+    int deleteByAccount(String account);
+
+    //返回所有用户的List
+    List<Customer> selectAll();
 
     //通过账户名查找一个用户，如果用户不存在，返回 null
     Customer selectByAccount(String account);
