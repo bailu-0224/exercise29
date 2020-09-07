@@ -16,7 +16,7 @@ public class ViewController {
 
         return "fire/register";
     }
-    @RequestMapping("/form.html")
+    @RequestMapping({"/form.html","/form"})
     public String form()
     {
 
