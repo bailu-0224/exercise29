@@ -58,7 +58,7 @@ public class ViewController {
     {
         return  "manage/admin-index";
     }
-    @RequestMapping("/form.html")
+    @RequestMapping("/limit.html")
     public String error()
     {
         return "fire/limit";
