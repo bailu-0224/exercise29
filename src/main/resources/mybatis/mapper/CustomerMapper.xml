@@ -2,26 +2,34 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.huadi.exercise29.repository.CustomerRepository">
+
     <select id="selectByAccount" parameterType="java.lang.String" resultType="com.huadi.exercise29.entity.Customer">
         SELECT * FROM customer WHERE account = #{account}
     </select>
+
     <insert id="insert" parameterType="com.huadi.exercise29.entity.Customer">
         INSERT INTO customer (account,password,type,name,auth)
             VALUES (#{account},#{password},#{type},#{name},#{auth})
     </insert>
+
     <delete id="deleteByAccount" parameterType="java.lang.String">
         DELETE FROM customer WHERE account = #{account}
     </delete>
+
     <select id="selectAll" resultType="com.huadi.exercise29.entity.Customer">
         SELECT * FROM customer
     </select>
+
     <select id="checkPasswd" parameterType="java.lang.String" resultType="java.lang.String">
         SELECT password FROM customer WHERE account = #{account}
     </select >
+
     <update id="ban" parameterType="java.lang.String">
         UPDATE customer SET auth = 0 WHERE account = #{account}
     </update>
+
     <update id="unban" parameterType="java.lang.String">
         UPDATE customer SET auth = 1 WHERE account = #{account}
     </update>
+
 </mapper>

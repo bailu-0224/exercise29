@@ -16,6 +16,9 @@ public interface AuthenticationRepository {
     //通过鉴定id删除一条鉴定申请，成功返回1，否则返回0
     int deleteById(int id);
 
+    //通过案件id删除所有对应案件的申请，成功返回删除案件的数目，否则返回0
+    int deleteByCaseId(int caseId);
+
     //通过鉴定id查找一条鉴定申请，如果id不存在，返回null
     Authentication selectById(int id);
 
@@ -24,6 +27,9 @@ public interface AuthenticationRepository {
 
     //返回一个用户申请的所有鉴定的List
     List<Authentication> selectByCustomer(String customerId);
+
+    //返回一个案件对应的所有鉴定的List
+    List<Authentication> selectByCase(int caseId);
 
     //将id为id的鉴定的状态更新为status，成功返回1，否则返回0
     int setStatus(@Param("id")int id, @Param("status")int status);
