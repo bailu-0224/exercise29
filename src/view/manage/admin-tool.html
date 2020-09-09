@@ -40,20 +40,7 @@
             opacity: 0.8;
         }
         /* Extra styles for the cancel button */
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #f44336;
-        }
-
         /* Center the image and position the close button */
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-            position: relative;
-        }
-
-
         .container {
             padding: 16px;
         }
@@ -82,6 +69,19 @@
             width: 80%; /* Could be more or less, depending on screen size */
         }
 
+        .modal2 {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
         /* The Close Button (x) */
         .close {
             position: absolute;
@@ -193,7 +193,7 @@
     <div class="admin-content">
 
         <div class="am-cf am-padding">
-            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">员工管理</strong> / <small>统计</small></div>
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">工具管理</strong> / <small>统计</small></div>
         </div>
 
         <div class="am-g">
@@ -242,8 +242,8 @@
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                     </div>
                                 </div>
@@ -258,8 +258,8 @@
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                     </div>
                                 </div>
@@ -274,8 +274,8 @@
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                     </div>
                                 </div>
@@ -290,8 +290,8 @@
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                     </div>
                                 </div>
@@ -339,30 +339,23 @@
 <!--<![endif]-->
 <script src="assets/js/app.js"></script>
 
-<div id="id01" class="modal">
-    　　　　
+<!--添加表单-->
 
-    　　
+<div id="id01" class="modal">
     <form class="modal-content animate" action="#">
         <div class="imgcontainer">
             <!-- 点击×号，隐藏模态框-->
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-
         </div>
-
         <div class="container">
             <label><b>设备编号</b></label>
             <input type="text" placeholder="请输入设备编号" name="number" required>
-
             <label><b>设备名</b></label>
             <input type="text" placeholder="请输入设备" name="name" required>
-
             <label><b>备注</b></label>
             <input type="text" placeholder="请为设备添加备注" name="remark">
-
             <button type="submit" class="yes-button">确认添加</button>
         </div>
-
         <div class="container" style="background-color:#f1f1f1">
             <!-- 点击cancel按钮，把模态框隐藏-->
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="am-btn am-btn-default">Cancel</button>
@@ -370,17 +363,43 @@
     </form>
 </div>
 
+<!--借用表单-->
+
+<div id="id02" class="modal2">
+    <form class="modal-content animate" action="#">
+        <div class="imgcontainer">
+            <!-- 点击×号，隐藏模态框-->
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <label><b>员工编号</b></label>
+            <input type="text" placeholder="请输入借用人员工编号" name="number" required>
+            <label><b>姓名</b></label>
+            <input type="text" placeholder="请输入借用人姓名" name="number" required>
+            <button type="submit" class="yes-button">确认借用</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <!-- 点击cancel按钮，把模态框隐藏-->
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="am-btn am-btn-default">Cancel</button>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>
 <script>
     // 获取模型
     var modal = document.getElementById('id01');
-
+    var modal2 = document.getElementById('id02');
     // 鼠标点击模型外区域关闭登录框
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+    }
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
         }
     }
 </script>
