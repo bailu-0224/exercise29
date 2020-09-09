@@ -43,6 +43,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             alert("您还未登录！");
         }
     </script>
+    <script type="text/javascript">
+        function checkPhone(){
+            var phone = document.getElementById('number').value;
+            if(!(/^1[3456789]\d{9}$/.test(phone))){
+                alert("手机号码有误，请重填");
+                return false;
+            }
+        }
+    </script>
+
     <!-- //for-mobile-apps -->
     <link href="../../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -147,6 +157,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h3>注册新账户</h3>
             <p>欢迎来到火灾物证鉴定系统，请先填写以下注册信息。</p>
             <form id="RegisterForm" action="login.html" th:action="@{/user/register}" method="post">
+                <!--                        当msg1不为空时候显示错误消息-->
+                <p style="color:red" th:if="${not #strings.isEmpty(msg1)}" th:text="${msg1}" ></p>
                 <ul>
                     <li class="text-info">姓名: </li>
                     <li><input id="Name" name="name" type="text" value=""></li>
@@ -161,7 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
                 <ul>
                     <li class="text-info">手机号码:</li>
-                    <li><input id="Number" name="number" type="text" value=""></li>
+                    <li><input id="phone" name="number" type="text" value="" onblur="checkPhone()"></li>
                 </ul>
                 <ul>
                     <li class="text-info">用户类型:</li>
@@ -171,6 +183,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
                 <p class="click">点击此按钮，即表示您同意<a href="#" class="qwe">《政策条款》</a>。</p>
                 <input type="submit" value="现在注册">
+                <a href="login.html " class="button ">返回登录</a>
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">

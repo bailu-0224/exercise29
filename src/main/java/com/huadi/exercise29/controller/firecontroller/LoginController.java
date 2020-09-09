@@ -1,4 +1,4 @@
-package com.huadi.exercise29.controller;
+package com.huadi.exercise29.controller.firecontroller;
 
 import com.huadi.exercise29.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;

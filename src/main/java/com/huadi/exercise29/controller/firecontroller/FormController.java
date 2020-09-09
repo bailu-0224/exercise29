@@ -1,4 +1,4 @@
-package com.huadi.exercise29.controller;
+package com.huadi.exercise29.controller.firecontroller;
 
 
 import com.huadi.exercise29.entity.Authentication;
@@ -41,7 +41,6 @@ public class FormController {
                 "item_root",
                 "report_root",
                 "000000"));
-        //int num_Auth = authenticationRepository.insert(new Authentication(0,"消防","头盔","哈哈哈。",1,"asfds",1,200,"asd","dasd","123456"));
 
         if (num_Auth == 1) {
             model.addAttribute("msg", "提交成功");

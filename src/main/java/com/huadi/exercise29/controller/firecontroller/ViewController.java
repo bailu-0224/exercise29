@@ -1,8 +1,7 @@
-package com.huadi.exercise29.controller;
+package com.huadi.exercise29.controller.firecontroller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.annotation.RequestScope;
 
 @Controller
 public class ViewController {
@@ -53,12 +52,7 @@ public class ViewController {
 
         return "fire/process";
     }
-    @RequestMapping("/admin")
-    public String management()
-    {
-        return  "manage/admin-index";
-    }
-    @RequestMapping("/limit.html")
+    @RequestMapping({"/form.html","/error"})
     public String error()
     {
         return "fire/limit";
@@ -78,4 +72,23 @@ public class ViewController {
     {
         return "fire/laws";
     }
+
+//    以下是后台管理界面的视图映射
+    @RequestMapping("/admin")
+    public String management()
+{
+    return  "manage/index";
+}
+    @RequestMapping("/admin-index.html")
+    public String managementIndex(){return "manage/admin-index";}
+    @RequestMapping("/admin-table.html")
+    public String managementTable(){return  "manage/admin-table";}
+    @RequestMapping("/admin-404.html")
+    public String management404(){return "manage/admin-404";}
+    @RequestMapping("/admin-employee.html")
+    public String managementEmployee(){return "manage/admin-employee";}
+    @RequestMapping("/admin-log.html")
+    public String managementLog(){return "manage/admin-log";}
+    @RequestMapping("/admin-user.html")
+    public String managementUser(){return "manage/admin-user";}
 }

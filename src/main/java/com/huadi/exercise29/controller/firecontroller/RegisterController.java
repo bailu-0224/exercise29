@@ -1,4 +1,4 @@
-package com.huadi.exercise29.controller;
+package com.huadi.exercise29.controller.firecontroller;
 
 import com.huadi.exercise29.entity.Customer;
 import com.huadi.exercise29.repository.CustomerRepository;
@@ -22,7 +22,11 @@ public class RegisterController {
                         Map<String,Object> map)
     {
         String Type;
-
+        if(customerRepository.selectByAccount(number)!=null) {
+            System.out.println("ok!");
+            map.put("msg1", "用户名已存在，请登录！");
+            return "fire/register";
+        }
        if(registerType==0)
        {
             Type="消防";
