@@ -21,6 +21,11 @@ public class LoginController {
                         Map<String,Object> map)
     {
         String password12 = customerRepository.checkPasswd(username);
+        if(customerRepository.selectByAccount(username)==null)
+        {
+            map.put("msg3","账户不存在，请注册");
+            return "fire/login";
+        }
 
         if(!StringUtils.isEmpty(username) && password12.equals(password))
             return "fire/index";

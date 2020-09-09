@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {
-    @RequestMapping({"/","/fire/login","/login.html"})
+    @RequestMapping({"/","/fire/login","/login.html","user/login.html"})
     public String login()
     {
         return "fire/login";
