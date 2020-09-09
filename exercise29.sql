@@ -71,12 +71,14 @@ CREATE TABLE `department`
 
 
 /*员工*/
-DROP TABLE IF EXISTS `emplyee`;
+DROP TABLE IF EXISTS `employee`;
 CREATE TABLE `employee`
 (
     `id` VARCHAR(20) NOT NULL,
     `name` VARCHAR(10) NOT NULL,
     `dept_id` INT NOT NULL,
+    `dept_name` VARCHAR(10) NOT NULL,
     `duty` VARCHAR(20) NOT NULL,
+    `time` VARCHAR(20) NOT NULL,
     PRIMARY KEY ( `id` )
 ) DEFAULT CHARSET=UTF8MB4;

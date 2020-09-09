@@ -18,7 +18,7 @@ public class EmployeeController {
     @GetMapping("/admin-employee.html")
     public String list(Model model)
     {
-        List<Employee> employees=employeeRepository.getall();
+        List<Employee> employees=employeeRepository.selectAll();
         model.addAttribute("emps",employees);
         return "manage/admin-employee";
     }

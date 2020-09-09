@@ -66,8 +66,9 @@ public class DaoTests {
 
     @Test
     void employeeTest() {
-        //emr.insert(new Employee("123456","叶圣",1,"拳击手"));
-        System.out.println(emr.selectByDeptId(8));
+        //emr.insert(new Employee("123456","叶圣",1,"保卫处","拳击手","20080808"));
+        System.out.println(emr.deleteById("123456"));
+        //System.out.println(emr.selectByDeptId(1));
     }
 
 }
