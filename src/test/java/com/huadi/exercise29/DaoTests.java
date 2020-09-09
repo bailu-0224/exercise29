@@ -30,10 +30,11 @@ public class DaoTests {
 
     @Test
     void authenticationTest(){
-        //aur.insert(new Authentication(0,"消防","头盔","哈哈哈。",1,"asfds",1,200,"asd","dasd","123456"));
-        //System.out.println(aur.selectAll());
+        //aur.insert(new Authentication(0,"消防","头盔","哈哈哈。",1,"asfds",8,200,"asd","dasd","123456"));
+        System.out.println(aur.selectByCase(8));
+        System.out.println(aur.deleteByCaseId(1));
         //System.out.println(aur.setExpress(1,"1201207570"));
-        System.out.println(aur.deleteById(2));
+        //System.out.println(aur.deleteById(2));
     }
 
     @Test
@@ -44,12 +45,16 @@ public class DaoTests {
 
     @Test
     void fireCaseTest(){
-        fr.insert(new FireCase(0,"美国队长3",19665478));
+        //fr.insert(new FireCase(0,"美国队长3",19665478));
+        System.out.println(fr.selectAll());
+        //System.out.println(fr.deleteById(1));
     }
 
     @Test
     void equipmentTest() {
-        eqr.insert(new Equipment(0,"灭火器","灭不了火的灭火器","空闲"));
+        //eqr.insert(new Equipment(0,"灭火器","灭不了火的灭火器","空闲"));
+        //System.out.println(eqr.deleteById(2));
+        System.out.println(eqr.setEmpId(3,"隔壁老王"));
     }
 
     @Test
@@ -62,9 +67,7 @@ public class DaoTests {
     @Test
     void employeeTest() {
         //emr.insert(new Employee("123456","叶圣",1,"拳击手"));
-        System.out.println(emr.deleteById("123456"));
+        System.out.println(emr.selectByDeptId(8));
     }
-
-    //未完成内容：所有的selectAll,根据部门删除员工，根据部门返回员工List，删除案件，删除设备，设备借还
 
 }
