@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {
-    @RequestMapping({"/","/fire/login","/login.html"})
+    @RequestMapping({"/","/fire/login","/login.html","user/login.html"})
     public String login()
     {
         return "fire/login";
@@ -91,4 +91,6 @@ public class ViewController {
     public String managementLog(){return "manage/admin-log";}
     @RequestMapping("/admin-user.html")
     public String managementUser(){return "manage/admin-user";}
+    @RequestMapping("/add")
+    public String managementAddemp(){return  "manage/admin-addemployee";}
 }

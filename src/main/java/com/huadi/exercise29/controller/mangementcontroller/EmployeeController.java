@@ -5,10 +5,9 @@ import com.huadi.exercise29.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
+import java.util.Map;
 
 @Controller
 public class EmployeeController {
@@ -18,8 +17,24 @@ public class EmployeeController {
     @GetMapping("/admin-employee.html")
     public String list(Model model)
     {
-        List<Employee> employees=employeeRepository.selectAll();
-        model.addAttribute("emps",employees);
+        model.addAttribute("emps",employeeRepository.selectAll());
         return "manage/admin-employee";
     }
+    //添加员工
+    @PostMapping ("/admin-employee.html")
+    public String addEmployee(Employee employee)
+    {
+        System.out.println(employee);
+        employeeRepository.insert(employee);
+        return "redirect:/admin-employee.html";
+    }
+    //删除员工
+    @PostMapping ("/admin-employee.html/{id}")
+    public String deleteEmployee(@PathVariable("id") String id)
+    {
+        System.out.println(id);
+        employeeRepository.deleteById(id);
+        return "redirect:/admin-employee.html";
+    }
+    //修改员工
 }

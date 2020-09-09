@@ -1,0 +1,408 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>工具管理</title>
+    <meta name="description" content="这是一个 table 页面">
+    <meta name="keywords" content="table">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <style>
+        /* Full-width input fields */
+        input[type=text] {
+            width: 100%;
+            padding: 7px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        .yes-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .yes-button:hover {
+            opacity: 0.8;
+        }
+        /* Extra styles for the cancel button */
+        /* Center the image and position the close button */
+        .container {
+            padding: 16px;
+        }
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .modal2 {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)}
+            to {-webkit-transform: scale(1)}
+        }
+
+        @keyframes animatezoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="am-topbar admin-header">
+    <div class="am-topbar-brand">
+        <strong>火灾物证鉴定后台管理系统</strong>
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+            <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 消息 <span class="am-badge am-badge-warning">5</span></a></li>
+            <li class="am-dropdown" data-am-dropdown>
+                <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                    <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+                </a>
+                <ul class="am-dropdown-content">
+                    <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+                    <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+                    <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="am-cf admin-main">
+    <!-- sidebar start -->
+    <div class="admin-sidebar">
+        <ul class="am-list admin-sidebar-list">
+            <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+            <li class="admin-parent">
+                <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 个人中心 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+                    <li><a href="admin-user.html" class="am-cf"><span class="am-icon-check"></span> 基本资料</a></li>
+                    <li><a href="admin-help.html"><span class="am-icon-puzzle-piece"></span> 帮助页</a></li>
+                    <li><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
+                    <li><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
+                </ul>
+            </li>
+            <li><a href="admin-table.html"><span class="am-icon-table"></span> 鉴定管理</a></li>
+            <li><a href="admin-employee.html"><span class="am-icon-pencil-square-o"></span> 员工管理</a></li>
+            <li><a href="admin-tool.html"><span class="am-icon-th"></span> 工具管理<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
+        </ul>
+
+        <div class="am-panel am-panel-default admin-sidebar-panel">
+            <div class="am-panel-bd">
+                <p><span class="am-icon-bookmark"></span> 公告</p>
+                <p>科学公正，准确高效。</p>
+            </div>
+        </div>
+
+        <div class="am-panel am-panel-default admin-sidebar-panel">
+            <div class="am-panel-bd">
+                <p><span class="am-icon-tag"></span>行为规范</p>
+                <p>心怀敬畏，严谨认真。</p>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- content start -->
+    <div class="admin-content">
+
+        <div class="am-cf am-padding">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">工具管理</strong> / <small>统计</small></div>
+        </div>
+
+        <div class="am-g">
+            <div class="am-u-md-6 am-cf">
+                <div class="am-fl am-cf">
+                    <div class="am-btn-toolbar am-fl">
+                        <div class="am-btn-group am-btn-group-xs">
+                            <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><span class="am-icon-plus"></span> 新增</button>
+                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
+                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
+                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-md-3 am-cf">
+                <div class="am-fr">
+                    <div class="am-input-group am-input-group-sm">
+                        <input type="text" >
+                        <span class="am-input-group-btn">
+                  <button class="am-btn am-btn-default" type="button">搜索</button>
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="am-g">
+            <div class="am-u-sm-12">
+                <form class="am-form">
+                    <table class="am-table am-table-striped am-table-hover table-main">
+                        <thead>
+                        <tr>
+                            <th class="table-check"><input type="checkbox" /></th><th class="table-toolID">设备编号</th>
+                            <th class="table-name">设备名</th><th class="table-borrowID">借用者</th><th class="table-remark">备注</th><th class="table-set">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td><a href="#"></a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td><a href="#"></a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td><a href="#"></a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td><a href="#"></a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button type="button" class="am-btn am-btn-default" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><span class="am-icon-pencil-square-o"></span> 借用</button>
+                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 归还</button>
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="am-cf">
+                        共 4 条记录
+                        <div class="am-fr">
+                            <ul class="am-pagination">
+                                <li class="am-disabled"><a href="#">«</a></li>
+                                <li class="am-active"><a href="#">1</a></li>
+                                <li><a href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <p>注：.....</p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- content end -->
+</div>
+
+<footer>
+    <hr>
+    <p class="am-padding-left">© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="assets/js/jquery1.11.1.min.js"></script>
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/polyfill/rem.min.js"></script>
+<script src="assets/js/polyfill/respond.min.js"></script>
+<script src="assets/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/app.js"></script>
+
+<!--添加表单-->
+
+<div id="id01" class="modal">
+    <form class="modal-content animate" action="#">
+        <div class="imgcontainer">
+            <!-- 点击×号，隐藏模态框-->
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <label><b>设备编号</b></label>
+            <input type="text" placeholder="请输入设备编号" name="number" required>
+            <label><b>设备名</b></label>
+            <input type="text" placeholder="请输入设备" name="name" required>
+            <label><b>备注</b></label>
+            <input type="text" placeholder="请为设备添加备注" name="remark">
+            <button type="submit" class="yes-button">确认添加</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <!-- 点击cancel按钮，把模态框隐藏-->
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="am-btn am-btn-default">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<!--借用表单-->
+
+<div id="id02" class="modal2">
+    <form class="modal-content animate" action="#">
+        <div class="imgcontainer">
+            <!-- 点击×号，隐藏模态框-->
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <label><b>员工编号</b></label>
+            <input type="text" placeholder="请输入借用人员工编号" name="number" required>
+            <label><b>姓名</b></label>
+            <input type="text" placeholder="请输入借用人姓名" name="number" required>
+            <button type="submit" class="yes-button">确认借用</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <!-- 点击cancel按钮，把模态框隐藏-->
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="am-btn am-btn-default">Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+<script>
+    // 获取模型
+    var modal = document.getElementById('id01');
+    var modal2 = document.getElementById('id02');
+    // 鼠标点击模型外区域关闭登录框
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
