@@ -91,4 +91,6 @@ public class ViewController {
     public String managementLog(){return "manage/admin-log";}
     @RequestMapping("/admin-user.html")
     public String managementUser(){return "manage/admin-user";}
+    @RequestMapping("/add")
+    public String managementAddemp(){return  "manage/admin-addemployee";}
 }
