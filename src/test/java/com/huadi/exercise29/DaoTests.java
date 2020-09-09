@@ -54,7 +54,7 @@ public class DaoTests {
     void equipmentTest() {
         //eqr.insert(new Equipment(0,"灭火器","灭不了火的灭火器","空闲"));
         //System.out.println(eqr.deleteById(2));
-        System.out.println(eqr.selectAll());
+        System.out.println(eqr.setEmpId(3,"隔壁老王"));
     }
 
     @Test
@@ -69,7 +69,5 @@ public class DaoTests {
         //emr.insert(new Employee("123456","叶圣",1,"拳击手"));
         System.out.println(emr.selectByDeptId(8));
     }
-
-    //未完成内容：设备借还
 
 }

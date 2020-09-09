@@ -15,4 +15,11 @@
         SELECT * FROM equipment
     </select>
 
+    <select id="selectEmpId" parameterType="int" resultType="java.lang.String">
+        SELECT serve FROM equipment WHERE id = #{id}
+    </select>
+
+    <update id="setEmpId">
+        UPDATE equipment SET serve = #{serve} WHERE id = #{id}
+    </update>
 </mapper>
