@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,91 +13,156 @@
     <link rel="icon" type="image/png" href="assets/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
+
 <body>
-<header class="am-topbar admin-header">
-    <div class="am-topbar-brand">
-        <strong>火灾物证鉴定后台管理系统</strong>
-    </div>
+    <header class="am-topbar admin-header">
+        <div class="am-topbar-brand">
+            <strong>火灾物证鉴定后台管理系统</strong>
+        </div>
 
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
 
-    <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
-        <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-            <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 消息 <span class="am-badge am-badge-warning">5</span></a></li>
-            <li class="am-dropdown" data-am-dropdown>
-                <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                    <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
-                </a>
-                <ul class="am-dropdown-content">
-                    <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
-                    <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-                    <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
-                </ul>
-            </li>
-            <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
-        </ul>
-    </div>
-</header>
+            <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+                <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 消息 <span class="am-badge am-badge-warning">5</span></a></li>
+                <li class="am-dropdown" data-am-dropdown>
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+                        <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+                        <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+                        <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+            </ul>
+        </div>
+    </header>
 
-<div class="am-cf admin-main">
-    <!-- sidebar start -->
-    <div class="admin-sidebar">
-        <ul class="am-list admin-sidebar-list">
-            <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
-            <li class="admin-parent">
-                <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 个人中心 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
-                <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-                    <li><a href="admin-user.html" class="am-cf"><span class="am-icon-check"></span> 基本资料</a></li>
-                    <li><a href="admin-help.html"><span class="am-icon-puzzle-piece"></span> 帮助页</a></li>
-                    <li><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
-                    <li><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
-                </ul>
-            </li>
-            <li><a href="admin-table.html"><span class="am-icon-table"></span> 鉴定管理</a></li>
-            <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 员工管理<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
-            <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
-        </ul>
+    <div class="am-cf admin-main">
+        <!-- sidebar start -->
+        <div class="admin-sidebar">
+            <ul class="am-list admin-sidebar-list">
+                <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 个人中心 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+                        <li><a href="admin-user.html" class="am-cf"><span class="am-icon-check"></span> 基本资料</a></li>
+                        <li><a href="admin-help.html"><span class="am-icon-puzzle-piece"></span> 帮助页</a></li>
+                        <li><a href="admin-log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
+                        <li><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
+                    </ul>
+                </li>
+                <li><a href="admin-table.html"><span class="am-icon-table"></span> 鉴定管理</a></li>
+                <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 员工管理<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+                <li><a href="admin-tool.html"><span class="am-icon-th"></span> 工具管理</a></li>
+                <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
+            </ul>
 
-        <div class="am-panel am-panel-default admin-sidebar-panel">
-            <div class="am-panel-bd">
-                <p><span class="am-icon-bookmark"></span> 公告</p>
-                <p>科学公正，准确高效。</p>
+            <div class="am-panel am-panel-default admin-sidebar-panel">
+                <div class="am-panel-bd">
+                    <p><span class="am-icon-bookmark"></span> 公告</p>
+                    <p>科学公正，准确高效。</p>
+                </div>
+            </div>
+
+            <div class="am-panel am-panel-default admin-sidebar-panel">
+                <div class="am-panel-bd">
+                    <p><span class="am-icon-tag"></span>行为规范</p>
+                    <p>心怀敬畏，严谨认真。</p>
+                </div>
             </div>
         </div>
+        <!-- sidebar end -->
 
-        <div class="am-panel am-panel-default admin-sidebar-panel">
-            <div class="am-panel-bd">
-                <p><span class="am-icon-tag"></span>行为规范</p>
-                <p>心怀敬畏，严谨认真。</p>
+        <!-- content start -->
+        <div class="admin-content">
+
+            <div class="am-cf am-padding">
+                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">员工管理</strong> / <small>统计</small></div>
             </div>
-        </div>
-    </div>
-    <!-- sidebar end -->
 
-    <!-- content start -->
-    <div class="admin-content">
+            <div class="am-g">
+                <div class="am-u-md-6 am-cf">
+                    <div class="am-fl am-cf">
+                        <div class="am-btn-toolbar am-fl">
+                            <div class="am-btn-group am-btn-group-xs">
+                                <button type="button" class="am-btn am-btn-default" data-toggle="modal" data-target="#myModal"><span class="am-icon-plus"></span> 新增</button>
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    新增员工
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-horizontal" role="form">
+                                                    <div class="form-group">
+                                                        <label for="table-empID" class="col-sm-3 control-label">员工编号</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="table-empID" name="table-empID" value="" placeholder="请输入员工编号">
+                                                        </div>
+                                                    </div>
 
-        <div class="am-cf am-padding">
-            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">员工管理</strong> / <small>统计</small></div>
-        </div>
+                                                    <div class="form-group">
+                                                        <label for="table-name" class="col-sm-3 control-label">姓名</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="table-name" value="" id="table-name" placeholder="请输入员工姓名">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="table-depID" class="col-sm-3 control-label">部门编号</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="table-depID" value="" id="table-depID" placeholder="请输入部门编号">
+                                                        </div>
+                                                    </div>
 
-        <div class="am-g">
-            <div class="am-u-md-6 am-cf">
-                <div class="am-fl am-cf">
-                    <div class="am-btn-toolbar am-fl">
-                        <div class="am-btn-group am-btn-group-xs">
-                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
-                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
-                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
-                            <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
-                        </div>
+                                                    <div class="form-group">
+                                                        <label for="table-department" class="col-sm-3 control-label">所属部门</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="table-department" value="" id="table-department" placeholder="请输入所属部门">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="table-position" class="col-sm-3 control-label">职务</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="table-position" value="" id="table-position" placeholder="请输入职务">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                </button>
+                                                <button type="button" class="btn btn-primary">
+                                                    提交
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal -->
+                                </div>
+                                <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
+                                <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
+                                <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+                            </div>
 
-                        <div class="am-form-group am-margin-left am-fl">
-                            <select>
+                            <div class="am-form-group am-margin-left am-fl">
+                                <select>
                                 <option value="option1">所有部门</option>
                                 <option value="option2">质量处</option>
                                 <option value="option3">办公室</option>
@@ -104,135 +170,141 @@
                                 <option value="option3">化工部</option>
                                 <option value="option3">机动车部</option>
                             </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="am-u-md-3 am-cf">
-                <div class="am-fr">
-                    <div class="am-input-group am-input-group-sm">
-                        <input type="text" class="am-form-field">
-                        <span class="am-input-group-btn">
+                <div class="am-u-md-3 am-cf">
+                    <div class="am-fr">
+                        <div class="am-input-group am-input-group-sm">
+                            <input type="text" class="am-form-field">
+                            <span class="am-input-group-btn">
                   <button class="am-btn am-btn-default" type="button">搜索</button>
                 </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="am-g">
-            <div class="am-u-sm-12">
-                <form class="am-form">
-                    <table class="am-table am-table-striped am-table-hover table-main">
-                        <thead>
-                        <tr>
-                            <th class="table-check"><input type="checkbox" /></th><th class="table-empID">员工编号</th>
-                            <th class="table-name">姓名</th><th class="table-depID">部门编号</th><th class="table-department">所属部门</th><th class="table-position">职务
-                        </th><th class="table-date">添加时间</th><th class="table-set">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>001</td>
-                            <td><a href="#">张三</a></td>
-                            <td>001</td>
-                            <td>质量处</td>
-                            <td>处长</td>
-                            <td>2020年1月1日 00:00:00</td>
-                            <td>
-                                <div class="am-btn-toolbar">
-                                    <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>002</td>
-                            <td><a href="#">李四</a></td>
-                            <td>002</td>
-                            <td>办公室</td>
-                            <td>职员</td>
-                            <td>2020年1月1日 00:00:00</td>
-                            <td>
-                                <div class="am-btn-toolbar">
-                                    <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>003</td>
-                            <td><a href="#">王五</a></td>
-                            <td>003</td>
-                            <td>电气部</td>
-                            <td>部长</td>
-                            <td>2020年1月1日 00:00:00</td>
-                            <td>
-                                <div class="am-btn-toolbar">
-                                    <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" /></td>
-                            <td>004</td>
-                            <td><a href="#">赵六</a></td>
-                            <td>004</td>
-                            <td>化工部</td>
-                            <td>部长</td>
-                            <td>2020年1月1日 00:00:00</td>
-                            <td>
-                                <div class="am-btn-toolbar">
-                                    <div class="am-btn-group am-btn-group-xs">
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
-                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+            <div class="am-g">
+                <div class="am-u-sm-12">
+                    <form class="am-form">
+                        <table class="am-table am-table-striped am-table-hover table-main">
+                            <thead>
+                                <tr>
+                                    <th class="table-check"><input type="checkbox" /></th>
+                                    <th class="table-empID">员工编号</th>
+                                    <th class="table-name">姓名</th>
+                                    <th class="table-depID">部门编号</th>
+                                    <th class="table-department">所属部门</th>
+                                    <th class="table-position">职务
+                                    </th>
+                                    <th class="table-date">添加时间</th>
+                                    <th class="table-set">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>001</td>
+                                    <td><a href="#">张三</a></td>
+                                    <td>001</td>
+                                    <td>质量处</td>
+                                    <td>处长</td>
+                                    <td>2020年1月1日 00:00:00</td>
+                                    <td>
+                                        <div class="am-btn-toolbar">
+                                            <div class="am-btn-group am-btn-group-xs">
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                                                <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>002</td>
+                                    <td><a href="#">李四</a></td>
+                                    <td>002</td>
+                                    <td>办公室</td>
+                                    <td>职员</td>
+                                    <td>2020年1月1日 00:00:00</td>
+                                    <td>
+                                        <div class="am-btn-toolbar">
+                                            <div class="am-btn-group am-btn-group-xs">
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                                                <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>003</td>
+                                    <td><a href="#">王五</a></td>
+                                    <td>003</td>
+                                    <td>电气部</td>
+                                    <td>部长</td>
+                                    <td>2020年1月1日 00:00:00</td>
+                                    <td>
+                                        <div class="am-btn-toolbar">
+                                            <div class="am-btn-group am-btn-group-xs">
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                                                <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>004</td>
+                                    <td><a href="#">赵六</a></td>
+                                    <td>004</td>
+                                    <td>化工部</td>
+                                    <td>部长</td>
+                                    <td>2020年1月1日 00:00:00</td>
+                                    <td>
+                                        <div class="am-btn-toolbar">
+                                            <div class="am-btn-group am-btn-group-xs">
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                                                <button class="am-btn am-btn-default am-btn-xs"><span class="am-icon-copy"></span> 复制</button>
+                                                <button class="am-btn am-btn-default am-btn-xs am-text-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                        </tbody>
-                    </table>
-                    <div class="am-cf">
-                        共 4 条记录
-                        <div class="am-fr">
-                            <ul class="am-pagination">
-                                <li class="am-disabled"><a href="#">«</a></li>
-                                <li class="am-active"><a href="#">1</a></li>
-                                <li><a href="#">»</a></li>
-                            </ul>
+                            </tbody>
+                        </table>
+                        <div class="am-cf">
+                            共 4 条记录
+                            <div class="am-fr">
+                                <ul class="am-pagination">
+                                    <li class="am-disabled"><a href="#">«</a></li>
+                                    <li class="am-active"><a href="#">1</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <hr />
-                    <p>注：.....</p>
-                </form>
+                        <hr />
+                        <p>注：.....</p>
+                    </form>
+                </div>
+
             </div>
-
         </div>
+        <!-- content end -->
     </div>
-    <!-- content end -->
-</div>
 
-<footer>
-    <hr>
-    <p class="am-padding-left">© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
-</footer>
+    <footer>
+        <hr>
+        <p class="am-padding-left">© 2020 火灾物证鉴定管理系统. 版权所有|工程设计实训</p>
+    </footer>
 
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 <script src="assets/js/jquery1.11.1.min.js"></script>
 <script src="assets/js/modernizr.js"></script>
 <script src="assets/js/polyfill/rem.min.js"></script>
@@ -240,10 +312,11 @@
 <script src="assets/js/amazeui.legacy.js"></script>
 <![endif]-->
 
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/amazeui.min.js"></script>
-<!--<![endif]-->
-<script src="assets/js/app.js"></script>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <!--<![endif]-->
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>
